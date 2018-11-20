@@ -2,14 +2,12 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.0</TargetFramework>
     <DefineConstants>$(DefineConstants);XPLAT</DefineConstants>
+
+    <!-- Workaround until https://github.com/aspnet/Common/pull/385 is done -->
+    <DefineConstants>$(DefineConstants);NETCOREAPP2_2</DefineConstants>
   </PropertyGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="template-baselines.json" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="AngleSharp" Version="$(AngleSharpPackageVersion)" />
     <PackageReference Include="Internal.AspNetCore.Sdk" Version="$(InternalAspNetCoreSdkPackageVersion)" />
     <PackageReference Include="Microsoft.AspNetCore.Testing" Version="$(MicrosoftAspNetCoreTestingPackageVersion)" />
     <PackageReference Include="Microsoft.Extensions.Process.Sources" Version="$(MicrosoftExtensionsProcessSourcesPackageVersion)" PrivateAssets="All" />

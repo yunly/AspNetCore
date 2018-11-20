@@ -1,15 +1,19 @@
 ﻿// Copyright (c) .NET Foundation. All rights reserved.
 // Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Testing.xunit;
+using Templates.Test.Infrastructure;
 using Xunit;
 using Xunit.Abstractions;
 
+[assembly: AssemblyFixture(typeof(SeleniumServerFixture))]
 namespace Templates.Test
 {
-    public class RazorPagesTemplateTest : TemplateTestBase
+    public class RazorPagesTemplateTest : BrowserTestBase
     {
-        public RazorPagesTemplateTest(ITestOutputHelper output) : base(output)
+        public RazorPagesTemplateTest(BrowserFixture browserFixture, ITestOutputHelper output)
+            : base(browserFixture, output)
         {
         }
 
@@ -31,8 +35,7 @@ namespace Templates.Test
             {
                 using (var aspNetProcess = StartAspNetProcess(publish))
                 {
-                    aspNetProcess.AssertOk("/");
-                    aspNetProcess.AssertOk("/Privacy");
+                    TestBasicNavigation(aspNetProcess, NoAuthUrls);
                 }
             }
         }
@@ -40,7 +43,7 @@ namespace Templates.Test
         [Theory]
         [InlineData(false)]
         [InlineData(true)]
-        public void RazorPagesTemplate_IndividualAuthImpl( bool useLocalDB)
+        public void RazorPagesTemplate_IndividualAuthImpl(bool useLocalDB)
         {
             RunDotNetNew("razor", auth: "Individual", useLocalDB: useLocalDB);
 
@@ -60,8 +63,7 @@ namespace Templates.Test
             {
                 using (var aspNetProcess = StartAspNetProcess(publish))
                 {
-                    aspNetProcess.AssertOk("/");
-                    aspNetProcess.AssertOk("/Privacy");
+                    TestBasicNavigation(aspNetProcess, AuthUrls);
                 }
             }
         }

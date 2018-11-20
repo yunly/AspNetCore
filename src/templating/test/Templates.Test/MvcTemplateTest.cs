@@ -1,15 +1,23 @@
 ﻿// Copyright (c) .NET Foundation. All rights reserved.
 // Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Testing.xunit;
+using Templates.Test.Infrastructure;
 using Xunit;
 using Xunit.Abstractions;
 
+[assembly: AssemblyFixture(typeof(SeleniumServerFixture))]
+// Turn off parallel test run for Edge as the driver does not support multiple Selenium tests at the same time
+#if EDGE
+[assembly: CollectionBehavior(CollectionBehavior.CollectionPerAssembly)]
+#endif
+[assembly: TestFramework("Templates.Test.Helpers.XunitExtensions.XunitTestFrameworkWithAssemblyFixture", "Templates.Test.Common")]
 namespace Templates.Test
 {
-    public class MvcTemplateTest : TemplateTestBase
+    public class MvcTemplateTest : BrowserTestBase
     {
-        public MvcTemplateTest(ITestOutputHelper output) : base(output)
+        public MvcTemplateTest(BrowserFixture browserFixture, ITestOutputHelper output) : base(browserFixture, output)
         {
         }
 
@@ -37,8 +45,7 @@ namespace Templates.Test
             {
                 using (var aspNetProcess = StartAspNetProcess(publish))
                 {
-                    aspNetProcess.AssertOk("/");
-                    aspNetProcess.AssertOk("/Home/Privacy");
+                    TestBasicNavigation(aspNetProcess, NoAuthUrls);
                 }
             }
         }
@@ -50,9 +57,9 @@ namespace Templates.Test
         {
             RunDotNetNew("mvc", auth: "Individual", useLocalDB: useLocalDB);
 
-            AssertDirectoryExists("Extensions", false);
-            AssertFileExists("urlRewrite.config", false);
-            AssertFileExists("Controllers/AccountController.cs", false);
+            AssertDirectoryExists("Extensions", shouldExist: false);
+            AssertFileExists("urlRewrite.config", shouldExist: false);
+            AssertFileExists("Controllers/AccountController.cs", shouldExist: false);
 
             var projectFileContents = ReadFile($"{ProjectName}.csproj");
             if (!useLocalDB)
@@ -68,8 +75,7 @@ namespace Templates.Test
             {
                 using (var aspNetProcess = StartAspNetProcess(publish))
                 {
-                    aspNetProcess.AssertOk("/");
-                    aspNetProcess.AssertOk("/Home/Privacy");
+                    TestBasicNavigation(aspNetProcess, AuthUrls);
                 }
             }
         }
