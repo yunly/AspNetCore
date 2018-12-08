@@ -17,6 +17,10 @@ Microsoft.AspNetCore.Mvc.RouteAttribute</Description>
   </PropertyGroup>
 
   <ItemGroup>
+      <Compile Include="$(RepositoryRoot)\src\Shared\RangeHelper\**\*.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Microsoft.AspNetCore.Mvc.Abstractions\Microsoft.AspNetCore.Mvc.Abstractions.csproj" />
 
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Core" Version="$(MicrosoftAspNetCoreAuthenticationCorePackageVersion)" />
