@@ -9,11 +9,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Microsoft.AspNetCore.Authentication\Microsoft.AspNetCore.Authentication.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="$(NewtonsoftJsonPackageVersion)" />
+    <Reference Include="Microsoft.AspNetCore.Authentication" />
+    <Reference Include="Newtonsoft.Json" />
   </ItemGroup>
 
 </Project>

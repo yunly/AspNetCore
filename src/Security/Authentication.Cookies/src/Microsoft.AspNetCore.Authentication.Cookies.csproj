@@ -10,11 +10,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="..\..\shared\Microsoft.AspNetCore.ChunkingCookieManager.Sources\**\*.cs" />
+    <Compile Include="$(RepositoryRoot)src\Shared\ChunkingCookieManager\**\*.cs" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Microsoft.AspNetCore.Authentication\Microsoft.AspNetCore.Authentication.csproj" />
+    <Reference Include="Microsoft.AspNetCore.Authentication" />
   </ItemGroup>
 
 </Project>

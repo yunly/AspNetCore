@@ -5,14 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Microsoft.AspNetCore.Authentication.Cookies\Microsoft.AspNetCore.Authentication.Cookies.csproj" />
-    <ProjectReference Include="..\..\src\Microsoft.Owin.Security.Interop\Microsoft.Owin.Security.Interop.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.TestHost" Version="$(MicrosoftAspNetCoreTestHostPackageVersion)" />
-    <PackageReference Include="Microsoft.Owin.Security.Cookies" Version="$(MicrosoftOwinSecurityCookiesPackageVersion)" />
-    <PackageReference Include="Microsoft.Owin.Testing" Version="$(MicrosoftOwinTestingPackageVersion)" />
+    <Reference Include="Microsoft.AspNetCore.Authentication.Cookies" />
+    <Reference Include="Microsoft.Owin.Security.Interop" />
+    <Reference Include="Microsoft.AspNetCore.TestHost" />
+    <Reference Include="Microsoft.Owin.Security.Cookies" />
+    <Reference Include="Microsoft.Owin.Testing" />
   </ItemGroup>
 
 </Project>

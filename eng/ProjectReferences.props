@@ -2,6 +2,19 @@
 <Project>
   <ItemGroup>
     <ProjectReferenceProvider Include="Microsoft.AspNetCore.Antiforgery" ProjectPath="$(RepositoryRoot)src\Antiforgery\src\Microsoft.AspNetCore.Antiforgery.csproj" />
+    <ProjectReferenceProvider Include="Microsoft.AspNetCore.Authentication" ProjectPath="$(RepositoryRoot)src\Security\Authentication\src\Microsoft.AspNetCore.Authentication.csproj" />
+    <ProjectReferenceProvider Include="Microsoft.AspNetCore.Authentication.Cookies" ProjectPath="$(RepositoryRoot)src\Security\Authentication.Cookies\src\Microsoft.AspNetCore.Authentication.Cookies.csproj" />
+    <ProjectReferenceProvider Include="Microsoft.AspNetCore.Authentication.Facebook" ProjectPath="$(RepositoryRoot)src\Security\Authentication.Facebook\src\Microsoft.AspNetCore.Authentication.Facebook.csproj" />
+    <ProjectReferenceProvider Include="Microsoft.AspNetCore.Authentication.Google" ProjectPath="$(RepositoryRoot)src\Security\Authentication.Google\src\Microsoft.AspNetCore.Authentication.Google.csproj" />
+    <ProjectReferenceProvider Include="Microsoft.AspNetCore.Authentication.JwtBearer" ProjectPath="$(RepositoryRoot)src\Security\Authentication.JwtBearer\src\Microsoft.AspNetCore.Authentication.JwtBearer.csproj" />
+    <ProjectReferenceProvider Include="Microsoft.AspNetCore.Authentication.MicrosoftAccount" ProjectPath="$(RepositoryRoot)src\Security\Authentication.MicrosoftAccount\src\Microsoft.AspNetCore.Authentication.MicrosoftAccount.csproj" />
+    <ProjectReferenceProvider Include="Microsoft.AspNetCore.Authentication.OAuth" ProjectPath="$(RepositoryRoot)src\Security\Authentication.OAuth\src\Microsoft.AspNetCore.Authentication.OAuth.csproj" />
+    <ProjectReferenceProvider Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" ProjectPath="$(RepositoryRoot)src\Security\Authentication.OpenIdConnect\src\Microsoft.AspNetCore.Authentication.OpenIdConnect.csproj" />
+    <ProjectReferenceProvider Include="Microsoft.AspNetCore.Authentication.Twitter" ProjectPath="$(RepositoryRoot)src\Security\Authentication.Twitter\src\Microsoft.AspNetCore.Authentication.Twitter.csproj" />
+    <ProjectReferenceProvider Include="Microsoft.AspNetCore.Authentication.WsFederation" ProjectPath="$(RepositoryRoot)src\Security\Authentication.WsFederation\src\Microsoft.AspNetCore.Authentication.WsFederation.csproj" />
+    <ProjectReferenceProvider Include="Microsoft.AspNetCore.Authorization" ProjectPath="$(RepositoryRoot)src\Security\Authorization\src\Microsoft.AspNetCore.Authorization.csproj" />
+    <ProjectReferenceProvider Include="Microsoft.AspNetCore.Authorization.Policy" ProjectPath="$(RepositoryRoot)src\Security\Authorization.Policy\src\Microsoft.AspNetCore.Authorization.Policy.csproj" />
+    <ProjectReferenceProvider Include="Microsoft.AspNetCore.CookiePolicy" ProjectPath="$(RepositoryRoot)src\Security\CookiePolicy\src\Microsoft.AspNetCore.CookiePolicy.csproj" />
     <ProjectReferenceProvider Include="Microsoft.AspNetCore.JsonPatch" ProjectPath="$(RepositoryRoot)src\Features\JsonPatch\src\Microsoft.AspNetCore.JsonPatch.csproj" />
     <ProjectReferenceProvider Include="Microsoft.AspNetCore.DataProtection.Abstractions" ProjectPath="$(RepositoryRoot)src\DataProtection\Abstractions\src\Microsoft.AspNetCore.DataProtection.Abstractions.csproj" />
     <ProjectReferenceProvider Include="Microsoft.AspNetCore.DataProtection.AzureKeyVault" ProjectPath="$(RepositoryRoot)src\DataProtection\AzureKeyVault\src\Microsoft.AspNetCore.DataProtection.AzureKeyVault.csproj" />
@@ -61,7 +74,6 @@
     <ProjectReferenceProvider Include="Microsoft.AspNetCore.ResponseCaching" ProjectPath="$(RepositoryRoot)src\Middleware\ResponseCaching\src\Microsoft.AspNetCore.ResponseCaching.csproj" />
     <ProjectReferenceProvider Include="Microsoft.AspNetCore.ResponseCaching.Abstractions" ProjectPath="$(RepositoryRoot)src\Middleware\ResponseCaching.Abstractions\src\Microsoft.AspNetCore.ResponseCaching.Abstractions.csproj" />
     <ProjectReferenceProvider Include="Microsoft.AspNetCore.StaticFiles" ProjectPath="$(RepositoryRoot)src\Middleware\StaticFiles\src\Microsoft.AspNetCore.StaticFiles.csproj" />
-
-    <ProjectReferenceProvider Include="Microsoft.AspNetCore.Authentication" ProjectPath="$(RepositoryRoot)src\Security\src\Authentication\Microsoft.AspNetCore.Authentic">
+    <ProjectReferenceProvider Include="Microsoft.Owin.Security.Interop" ProjectPath="$(RepositoryRoot)src\Security\Microsoft.Owin.Security.Interop\src\Microsoft.Owin.Security.Interop.csproj" />
   </ItemGroup>
 </Project>

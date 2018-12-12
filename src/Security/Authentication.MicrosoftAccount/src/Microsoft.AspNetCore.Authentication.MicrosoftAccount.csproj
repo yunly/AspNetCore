@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Microsoft.AspNetCore.Authentication.OAuth\Microsoft.AspNetCore.Authentication.OAuth.csproj" />
+    <Reference Include="Microsoft.AspNetCore.Authentication.OAuth" />
   </ItemGroup>
 
 </Project>

@@ -9,11 +9,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Microsoft.AspNetCore.Authorization\Microsoft.AspNetCore.Authorization.csproj" />
+    <Reference Include="Microsoft.AspNetCore.Authorization" />
+    <Reference Include="Microsoft.AspNetCore.Authentication.Abstractions" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Authentication.Abstractions" Version="$(MicrosoftAspNetCoreAuthenticationAbstractionsPackageVersion)" />
     <PackageReference Include="Microsoft.Extensions.SecurityHelper.Sources" PrivateAssets="All" Version="$(MicrosoftExtensionsSecurityHelperSourcesPackageVersion)" />
   </ItemGroup>
 

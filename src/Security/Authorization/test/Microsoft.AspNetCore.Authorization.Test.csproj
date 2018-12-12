@@ -5,14 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Microsoft.AspNetCore.Authorization\Microsoft.AspNetCore.Authorization.csproj" />
-    <ProjectReference Include="..\..\src\Microsoft.AspNetCore.Authorization.Policy\Microsoft.AspNetCore.Authorization.Policy.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Http" Version="$(MicrosoftAspNetCoreHttpPackageVersion)" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="$(MicrosoftExtensionsDependencyInjectionPackageVersion)" />
-    <PackageReference Include="Microsoft.Extensions.Logging" Version="$(MicrosoftExtensionsLoggingPackageVersion)" />
+    <Reference Include="Microsoft.AspNetCore.Authorization" />
+    <Reference Include="Microsoft.AspNetCore.Authorization.Policy" />
+    <Reference Include="Microsoft.AspNetCore.Http" />
+    <Reference Include="Microsoft.Extensions.DependencyInjection" />
+    <Reference Include="Microsoft.Extensions.Logging" />
   </ItemGroup>
 
 </Project>

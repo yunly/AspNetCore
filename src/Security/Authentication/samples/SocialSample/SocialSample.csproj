@@ -14,23 +14,20 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Microsoft.AspNetCore.Authentication.Cookies\Microsoft.AspNetCore.Authentication.Cookies.csproj" />
-    <ProjectReference Include="..\..\src\Microsoft.AspNetCore.Authentication.Facebook\Microsoft.AspNetCore.Authentication.Facebook.csproj" />
-    <ProjectReference Include="..\..\src\Microsoft.AspNetCore.Authentication.Google\Microsoft.AspNetCore.Authentication.Google.csproj" />
-    <ProjectReference Include="..\..\src\Microsoft.AspNetCore.Authentication.MicrosoftAccount\Microsoft.AspNetCore.Authentication.MicrosoftAccount.csproj" />
-    <ProjectReference Include="..\..\src\Microsoft.AspNetCore.Authentication.Twitter\Microsoft.AspNetCore.Authentication.Twitter.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.DataProtection" Version="$(MicrosoftAspNetCoreDataProtectionPackageVersion)" />
-    <PackageReference Include="Microsoft.AspNetCore.Server.IISIntegration" Version="$(MicrosoftAspNetCoreServerIISIntegrationPackageVersion)" />
-    <PackageReference Include="Microsoft.AspNetCore.Server.Kestrel" Version="$(MicrosoftAspNetCoreServerKestrelPackageVersion)" />
-    <PackageReference Include="Microsoft.AspNetCore.Server.Kestrel.Https" Version="$(MicrosoftAspNetCoreServerKestrelHttpsPackageVersion)" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="$(MicrosoftExtensionsConfigurationEnvironmentVariablesPackageVersion)" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="$(MicrosoftExtensionsConfigurationUserSecretsPackageVersion)" />
-    <PackageReference Include="Microsoft.AspNetCore.Diagnostics" Version="$(MicrosoftAspNetCoreDiagnosticsPackageVersion)" />
-    <PackageReference Include="Microsoft.Extensions.FileProviders.Embedded" Version="$(MicrosoftExtensionsFileProvidersEmbeddedPackageVersion)" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="$(MicrosoftExtensionsLoggingConsolePackageVersion)" />
+    <Reference Include="Microsoft.AspNetCore.Authentication.Cookies" />
+    <Reference Include="Microsoft.AspNetCore.Authentication.Facebook" />
+    <Reference Include="Microsoft.AspNetCore.Authentication.Google" />
+    <Reference Include="Microsoft.AspNetCore.Authentication.MicrosoftAccount" />
+    <Reference Include="Microsoft.AspNetCore.Authentication.Twitter" />
+    <Reference Include="Microsoft.AspNetCore.DataProtection" />
+    <Reference Include="Microsoft.AspNetCore.Server.IISIntegration" />
+    <Reference Include="Microsoft.AspNetCore.Server.Kestrel" />
+    <Reference Include="Microsoft.AspNetCore.Server.Kestrel.Https" />
+    <Reference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" />
+    <Reference Include="Microsoft.Extensions.Configuration.UserSecrets" />
+    <Reference Include="Microsoft.AspNetCore.Diagnostics" />
+    <Reference Include="Microsoft.Extensions.FileProviders.Embedded" />
+    <Reference Include="Microsoft.Extensions.Logging.Console" />
   </ItemGroup>
 
 </Project>

@@ -9,11 +9,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Microsoft.AspNetCore.Authentication.OAuth\Microsoft.AspNetCore.Authentication.OAuth.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.IdentityModel.Protocols.OpenIdConnect" Version="$(MicrosoftIdentityModelProtocolsOpenIdConnectPackageVersion)" />
+    <Reference Include="Microsoft.AspNetCore.Authentication.OAuth" />
+    <Reference Include="Microsoft.IdentityModel.Protocols.OpenIdConnect" />
   </ItemGroup>
 
 </Project>

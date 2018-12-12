@@ -5,13 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Microsoft.AspNetCore.Authentication.Cookies\Microsoft.AspNetCore.Authentication.Cookies.csproj" />
-    <ProjectReference Include="..\..\src\Microsoft.AspNetCore.CookiePolicy\Microsoft.AspNetCore.CookiePolicy.csproj" />
+    <Compile Include="$(RepositoryRoot)src\Shared\ChunkingCookieManager\**\*.cs" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.TestHost" Version="$(MicrosoftAspNetCoreTestHostPackageVersion)" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="$(MicrosoftExtensionsDependencyInjectionPackageVersion)" />
+    <Reference Include="Microsoft.AspNetCore.Authentication.Cookies" />
+    <Reference Include="Microsoft.AspNetCore.CookiePolicy" />
+    <Reference Include="Microsoft.AspNetCore.TestHost" />
+    <Reference Include="Microsoft.Extensions.DependencyInjection" />
   </ItemGroup>
 
 </Project>
