@@ -61,5 +61,7 @@
     <ProjectReferenceProvider Include="Microsoft.AspNetCore.ResponseCaching" ProjectPath="$(RepositoryRoot)src\Middleware\ResponseCaching\src\Microsoft.AspNetCore.ResponseCaching.csproj" />
     <ProjectReferenceProvider Include="Microsoft.AspNetCore.ResponseCaching.Abstractions" ProjectPath="$(RepositoryRoot)src\Middleware\ResponseCaching.Abstractions\src\Microsoft.AspNetCore.ResponseCaching.Abstractions.csproj" />
     <ProjectReferenceProvider Include="Microsoft.AspNetCore.StaticFiles" ProjectPath="$(RepositoryRoot)src\Middleware\StaticFiles\src\Microsoft.AspNetCore.StaticFiles.csproj" />
+
+    <ProjectReferenceProvider Include="Microsoft.AspNetCore.Authentication" ProjectPath="$(RepositoryRoot)src\Security\src\Authentication\Microsoft.AspNetCore.Authentic">
   </ItemGroup>
 </Project>

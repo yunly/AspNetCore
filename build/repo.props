@@ -74,6 +74,7 @@
                       $(RepositoryRoot)src\Html\**\*.*proj;
                       $(RepositoryRoot)src\Servers\**\*.csproj;
                       $(RepositoryRoot)src\Servers\**\*.pkgproj;
+                      $(RepositoryRoot)src\Security\**\*.*proj;
                       $(RepositoryRoot)src\Tools\**\*.*proj;
                       $(RepositoryRoot)src\Middleware\**\*.*proj;
                       "
