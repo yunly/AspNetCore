@@ -9,7 +9,7 @@ namespace Microsoft.AspNetCore.Server.IISIntegration.FunctionalTests
     {
         public static ServerType ServerType => ServerType.IISExpress;
         public static bool IsForwardsCompatibilityTest => false;
-        public static bool HasNewShim => false;
-        public static bool HasNewHandler => false;
+        public static bool HasNewShim => true;
+        public static bool HasNewHandler => true;
     }
 }

@@ -77,6 +77,7 @@ namespace Microsoft.AspNetCore.Server.IISIntegration.FunctionalTests
             if (DeployerSelector.HasNewHandler)
             {
                 Assert.Equal(deploymentResult.ContentRoot, await deploymentResult.HttpClient.GetStringAsync("/CurrentDirectory"));
+                Assert.Equal(Path.GetDirectoryName(deploymentResult.HostProcess.MainModule.FileName), await deploymentResult.HttpClient.GetStringAsync("/DllDirectory"));
             }
         }
     }
