@@ -74,7 +74,7 @@ namespace Microsoft.AspNetCore.Server.IISIntegration.FunctionalTests
             var expectedDll = variant.AncmVersion == AncmVersion.AspNetCoreModule ? "aspnetcore.dll" : "aspnetcorev2.dll";
             Assert.Contains(deploymentResult.HostProcess.Modules.OfType<ProcessModule>(), m=> m.FileName.Contains(expectedDll));
 
-            if (DeployerSelector.HasNewHandler)
+            if (DeployerSelector.HasNewHandler && variant.HostingModel == HostingModel.InProcess)
             {
                 Assert.Equal(deploymentResult.ContentRoot, await deploymentResult.HttpClient.GetStringAsync("/CurrentDirectory"));
                 Assert.Equal(Path.GetDirectoryName(deploymentResult.HostProcess.MainModule.FileName), await deploymentResult.HttpClient.GetStringAsync("/DllDirectory"));
